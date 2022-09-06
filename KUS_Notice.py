@@ -22,11 +22,9 @@ def job_function():
 				sejong = "sejong.korea.ac.kr" + adrs
 			now = datetime.date.today().strftime('%Y-%m-%d')
 			run = bot.sendMessage(chat_id = chat_id, text = content + '\n' + "[DATE] " + now + '\n' + "[URL] " + sejong)
-		f_read.close()
             
     with open ('Update_Notice.txt', 'w+') as f_write :
         f_write.write(content)
-        f_write.close()
     
 sched = BlockingScheduler()
 sched = BlockingScheduler(timezone='Asia/Seoul')
